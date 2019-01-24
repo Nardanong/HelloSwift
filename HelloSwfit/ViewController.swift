@@ -12,6 +12,8 @@ class ViewController: UIViewController {
     
 //    Explicit
     let myName:String = "Nardanong.s1"
+    var friends = ["Doremon","Nopita","Sunako","Shisuka","AAAA"]
+    var index:Int = 0
     
     
     @IBOutlet weak var TitleLable: UILabel!
@@ -25,9 +27,15 @@ class ViewController: UIViewController {
     @IBAction func changeButton(_ sender: UIButton) {
         
 //        Repeat myName
-        TitleLable.text = myName
+        TitleLable.text = friends[index]
         
+        if index < friends.count-1 {
+            index += 1
+        }else{
+            index = 0
+        }
         
+        print("index ==> \(index)")
         
     }
 } //Main Class
